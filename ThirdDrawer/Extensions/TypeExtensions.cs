@@ -11,5 +11,10 @@ namespace ThirdDrawer.Extensions
             if (type.ContainsGenericParameters) return false;
             return true;
         }
+
+        public static bool IsAssignableTo<TTarget>(this Type type)
+        {
+            return typeof (TTarget).IsAssignableFrom(type);
+        }
     }
 }
