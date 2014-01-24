@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -10,7 +11,7 @@ namespace ThirdDrawer.Extensions
     {
         public static string FormatWith(this string s, params object[] args)
         {
-            return string.Format(s, args);
+            return string.Format(CultureInfo.CurrentUICulture, s, args);
         }
 
         public static string GenerateRandomString(int length)
