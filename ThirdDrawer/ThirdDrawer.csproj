@@ -39,12 +39,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Extensions\ClassExtensions.cs" />
-    <Compile Include="Extensions\CollectionExtensions.cs" />
-    <Compile Include="Extensions\TaskExtensions.cs" />
+    <Compile Include="Extensions\ClassExtensionMethods\ClassExtensions.cs" />
+    <Compile Include="Extensions\CollectionExtensionMethods\CollectionExtensions.cs" />
+    <Compile Include="Extensions\TaskExtensionMethods\TaskExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Extensions\StringExtensions.cs" />
-    <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="Extensions\StringExtensionMethods\StringExtensions.cs" />
+    <Compile Include="Extensions\TypeExtensionMethods\TypeExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ThirdDrawer.nuspec" />
