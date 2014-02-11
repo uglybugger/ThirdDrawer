@@ -45,6 +45,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Extensions\StringExtensionMethods\StringExtensions.cs" />
     <Compile Include="Extensions\TypeExtensionMethods\TypeExtensions.cs" />
+    <Compile Include="ThreadSafeLazy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ThirdDrawer.nuspec" />
