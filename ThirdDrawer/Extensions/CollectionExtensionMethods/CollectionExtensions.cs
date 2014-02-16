@@ -38,5 +38,19 @@ namespace ThirdDrawer.Extensions.CollectionExtensionMethods
                 // just force enumeration; that's all.
             }
         }
+
+        public static void AddRange<T>(this ICollection<T> collection, IEnumerable<T> items)
+        {
+            foreach (var item in items) collection.Add(item);
+        }
+
+        public static IEnumerable<T> DepthFirst<T>(this IEnumerable<T> source, Func<T, IEnumerable<T>> children)
+        {
+            foreach (var item in source)
+            {
+                yield return item;
+                foreach (var descendant in children(item).DepthFirst<T>(children)) yield return descendant;
+            }
+        }
     }
 }
