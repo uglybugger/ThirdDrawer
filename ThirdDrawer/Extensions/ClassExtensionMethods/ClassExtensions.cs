@@ -7,8 +7,8 @@ namespace ThirdDrawer.Extensions.ClassExtensionMethods
         public static TResult Coalesce<T, TResult>(this T o, Func<T, TResult> extractValue, TResult defaultValue) where T : class
         {
             return o == null
-                       ? defaultValue
-                       : extractValue(o);
+                ? defaultValue
+                : extractValue(o);
         }
     }
 }
