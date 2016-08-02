@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Extensions\ClassExtensionMethods\ClassExtensions.cs" />
     <Compile Include="Extensions\CollectionExtensionMethods\CollectionExtensions.cs" />
+    <Compile Include="Extensions\CollectionExtensionMethods\Partition.cs" />
     <Compile Include="Extensions\StringExtensionMethods\Base64StringExtensions.cs" />
     <Compile Include="Extensions\TaskExtensionMethods\TaskExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
