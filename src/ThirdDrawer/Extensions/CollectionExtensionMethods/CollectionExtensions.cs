@@ -52,5 +52,20 @@ namespace ThirdDrawer.Extensions.CollectionExtensionMethods
                 foreach (var descendant in children(item).DepthFirst<T>(children)) yield return descendant;
             }
         }
+
+        public static Partition<T> Partition<T>(this IEnumerable<T> source, Predicate<T> predicate)
+        {
+            if (source == null) throw new ArgumentNullException(nameof(source));
+
+            var groupings = source.GroupBy(i => predicate(i), i => i);
+            return new Partition<T>(
+                groupings.FirstOrDefault(g => g.Key).EmptyIfNull(),
+                groupings.FirstOrDefault(g => !g.Key).EmptyIfNull());
+        }
+
+        private static IEnumerable<T> EmptyIfNull<T>(this IEnumerable<T> source)
+        {
+            return source ?? Enumerable.Empty<T>();
+        }
     }
 }
