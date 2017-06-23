@@ -91,5 +91,10 @@ namespace ThirdDrawer.Extensions.StringExtensionMethods
         {
             return !src.NoVal();
         }
+
+        public static bool EqualCaseInsensitive(this string src, string compareWith)
+        {
+            return (string.Equals(src, compareWith, StringComparison.OrdinalIgnoreCase));
+        }
     }
 }
