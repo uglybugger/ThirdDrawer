@@ -48,6 +48,7 @@
     <Compile Include="Base64Tests\WhenEncodingFoo.cs" />
     <Compile Include="Base64Tests\WhenEncodingThenDecodingAString.cs" />
     <Compile Include="CollectionExtensionTests\WhenPartitioningACollectionOfNumbersByParity.cs" />
+    <Compile Include="StringExtensionTests\StringExtensions.cs" />
     <Compile Include="TypeExtensionTests\WhenLookingForClosedTypesOfAnOpenGeneric.cs" />
     <Compile Include="WhenTheTestHarnessRuns.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
