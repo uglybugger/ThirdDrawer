@@ -14,7 +14,7 @@ namespace ThirdDrawer.Extensions.StringExtensionMethods
         public static string FromBase64(this string s, Encoding encoding)
         {
             var bytes = Convert.FromBase64String(s);
-            return encoding.GetString(bytes);
+            return encoding.GetString(bytes, 0, bytes.Length);
         }
     }
 }
