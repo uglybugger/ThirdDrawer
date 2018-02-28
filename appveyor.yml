@@ -31,7 +31,7 @@ deploy:
 - provider: NuGet
   server: https://www.myget.org/F/third-drawer/api/v2/package
   api_key:
-    secure: kEnorOjLoPoKV4Fau88X07gPDv0hSoQCUh/0H1SRvA8lDVWrarQv2GyItYPBBE9S
+    secure: hnYOdzgJmtlGcUd5q/Dxf774aeoPd/izBKMHehARJhkV0E0V0hm2l/jwCYWSWfsb
   symbol_server: https://www.myget.org/F/third-drawer/symbols/api/v2/package
   on:
     branch: master
