@@ -1,0 +1,37 @@
+version: 1.2.{build}
+skip_tags: true
+image: Visual Studio 2017
+configuration: Release
+assembly_info:
+  patch: true
+  file: '**\AssemblyInfo.*'
+  assembly_version: '{version}'
+  assembly_file_version: '{version}'
+  assembly_informational_version: '{version}'
+dotnet_csproj:
+  patch: true
+  file: '**\*.csproj'
+  version: '{version}'
+  package_version: '{version}'
+  assembly_version: '{version}'
+  file_version: '{version}'
+  informational_version: '{version}'
+before_build:
+- cmd: >-
+    cd src
+
+    nuget restore
+
+    cd ..
+build:
+  publish_nuget: true
+  parallel: true
+  verbosity: minimal
+deploy:
+- provider: NuGet
+  server: https://www.myget.org/F/third-drawer/api/v2/package
+  api_key:
+    secure: kEnorOjLoPoKV4Fau88X07gPDv0hSoQCUh/0H1SRvA8lDVWrarQv2GyItYPBBE9S
+  symbol_server: https://www.myget.org/F/third-drawer/symbols/api/v2/package
+  on:
+    branch: master
