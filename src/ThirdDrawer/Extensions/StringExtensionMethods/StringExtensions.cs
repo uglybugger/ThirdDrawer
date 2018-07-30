@@ -14,7 +14,7 @@ namespace ThirdDrawer.Extensions.StringExtensionMethods
         {
             return string.Format(CultureInfo.CurrentUICulture, s, args);
         }
-
+        
         public static string GenerateRandomString(int length)
         {
             var characters = new List<char>();
@@ -80,6 +80,21 @@ namespace ThirdDrawer.Extensions.StringExtensionMethods
             }
 
             return working;
+        }
+
+        public static bool NoVal(this string src)
+        {
+            return string.IsNullOrWhiteSpace(src);
+        }
+
+        public static bool HasVal(this string src)
+        {
+            return !src.NoVal();
+        }
+
+        public static bool EqualCaseInsensitive(this string src, string compareWith)
+        {
+            return (string.Equals(src, compareWith, StringComparison.OrdinalIgnoreCase));
         }
     }
 }
